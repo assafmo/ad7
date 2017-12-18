@@ -1,7 +1,7 @@
 {
   "name": "ad7",
   "version": "0.1.0",
-  "description": "Command line addic7ed.com subs downloader",
+  "description": "Command line addic7ed.com subtitle downloader",
   "main": "main.js",
   "bin": {
     "ad7": "./main.js"
