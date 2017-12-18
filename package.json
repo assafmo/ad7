@@ -1,0 +1,23 @@
+{
+  "name": "ad7",
+  "version": "0.1.0",
+  "description": "Command line addic7ed.com subs downloader",
+  "main": "main.js",
+  "bin": {
+    "ad7": "./main.js"
+  },
+  "dependencies": {
+    "addic7ed-api": "^1.3.2",
+    "flags": "^0.1.3"
+  },
+  "keywords": ["cli", "sub", "subs", "subtitles", "addic7ed", "addic7ed.com"],
+  "author": "assafmo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/assafmo/ad7.git"
+  },
+  "bugs": {
+    "url": "https://github.com/assafmo/ad7/issues"
+  },
+  "license": "MIT"
+}
