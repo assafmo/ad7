@@ -1,6 +1,6 @@
 # ad7
 
-Command line addic7ed.com subtitle downloader.
+Command line downloader for subtitles from addic7ed.com.
 
 [![npm version](https://badge.fury.io/js/ad7.svg)](https://badge.fury.io/js/ad7)
 
@@ -29,6 +29,13 @@ Options:
 ```
 
 ## Usage examples
+
+```bash
+ad7 --show "the flash" --s 4 --e 8
+ad7 --show "the flash" --s 4 --e 8 --lang english
+ad7 --show "the flash" --s 4 --e 8
+seq 1 4 | xargs -n 1 ad7 --show "the flash" --s 4 --e
+```
 
 ## License
 
