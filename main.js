@@ -30,7 +30,7 @@ const show = flags.get("show");
 const season = "" + flags.get("s");
 const episode = "" + flags.get("e");
 
-const lang = flags.get("show").toLowerCase();
+const lang = flags.get("lang").toLowerCase();
 
 (async () => {
   let subs = await addic7edApi.search(show, season, episode);
@@ -40,7 +40,7 @@ const lang = flags.get("show").toLowerCase();
   for (let subInfo of subs) {
     if (
       subInfo.langId.toLowerCase() != lang &&
-      subInfo.languege.toLowerCase() != lang
+      subInfo.lang.toLowerCase() != lang
     ) {
       continue;
     }
