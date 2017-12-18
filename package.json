@@ -1,6 +1,6 @@
 {
   "name": "ad7",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command line downloader for subtitles from addic7ed.com",
   "main": "main.js",
   "bin": {
@@ -10,7 +10,14 @@
     "addic7ed-api": "^1.3.2",
     "flags": "^0.1.3"
   },
-  "keywords": ["cli", "sub", "subs", "subtitles", "addic7ed", "addic7ed.com"],
+  "keywords": [
+    "cli",
+    "sub",
+    "subs",
+    "subtitles",
+    "addic7ed",
+    "addic7ed.com"
+  ],
   "author": "assafmo",
   "repository": {
     "type": "git",
