@@ -39,4 +39,4 @@ seq 1 4 | xargs -n 1 ad7 --show "the flash" --s 4 --e
 
 ## License
 
-[MIT](/LICENSE.md)
+[MIT](/LICENSE)
