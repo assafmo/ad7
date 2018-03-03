@@ -33,7 +33,7 @@ const episode = "" + flags.get("e");
 const lang = flags.get("lang").toLowerCase();
 
 (async () => {
-  let subs = await addic7edApi.search(show, season, episode);
+  const subs = await addic7edApi.search(show, season, episode);
   subs.sort((a, b) => b.link > a.link); // Newest versions first
 
   const alreadyDownloaded = new Set();
