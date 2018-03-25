@@ -34,6 +34,11 @@ const lang = flags.get("lang").toLowerCase();
 
 (async () => {
   const subs = await addic7edApi.search(show, season, episode);
+  if (!subs) {
+    console.error("Found nothing for", show, season, episode);
+    process.exit(1);
+  }
+
   subs.sort((a, b) => b.link > a.link); // Newest versions first
 
   const alreadyDownloaded = new Set();
