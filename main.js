@@ -11,6 +11,7 @@ flags.defineString(
 flags.defineString("show", "", "Show name");
 flags.defineNumber("s", -1, "Season");
 flags.defineNumber("e", -1, "Episode");
+flags.defineBoolean("hi", false, "Hearing impaired");
 flags.parse();
 
 if (flags.get("show") == "") {
@@ -29,6 +30,7 @@ if (flags.get("e") == -1) {
 const show = flags.get("show");
 const season = "" + flags.get("s");
 const episode = "" + flags.get("e");
+const hearingImpaired = flags.get("hi");
 
 const lang = flags.get("lang").toLowerCase();
 
@@ -44,8 +46,9 @@ const lang = flags.get("lang").toLowerCase();
   const alreadyDownloaded = new Set();
   for (let subInfo of subs) {
     if (
-      subInfo.langId.toLowerCase() != lang &&
-      subInfo.lang.toLowerCase() != lang
+      (subInfo.langId.toLowerCase() != lang &&
+        subInfo.lang.toLowerCase() != lang) ||
+      hearingImpaired != subInfo.hearingImpaired
     ) {
       continue;
     }
@@ -55,7 +58,7 @@ const lang = flags.get("lang").toLowerCase();
     fileName += `E${episode.length == 1 ? `0${episode}` : episode}.`;
     fileName += `${subInfo.distribution}.`;
     fileName += `${subInfo.version}.`;
-    fileName += `${subInfo.team}.srt`;
+    fileName += `${subInfo.team}${subInfo.hearingImpaired ? ".HI" : ""}.srt`;
     fileName = fileName.replace(/\//g, "-");
 
     if (alreadyDownloaded.has(fileName)) {
