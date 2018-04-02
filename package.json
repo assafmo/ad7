@@ -7,7 +7,7 @@
     "ad7": "./main.js"
   },
   "dependencies": {
-    "addic7ed-api": "^1.4.0",
+    "addic7ed-api": "^1.5.0",
     "flags": "0.1.3"
   },
   "keywords": [
