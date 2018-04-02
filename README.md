@@ -26,6 +26,8 @@ Options:
   --e: Episode
     (default: -1)
     (a number)
+  --[no]hi: Hearing impaired
+    (default: false)
 ```
 
 ## Usage examples
@@ -33,7 +35,7 @@ Options:
 ```bash
 ad7 --show "the flash" --s 4 --e 8
 ad7 --show "the flash" --s 4 --e 8 --lang english
-ad7 --show "the flash" --s 4 --e 8
+ad7 --show "the flash" --s 4 --e 8 --hi
 seq 1 4 | xargs -n 1 ad7 --show "the flash" --s 4 --e
 ```
 
