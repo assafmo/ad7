@@ -15,15 +15,21 @@ flags.defineBoolean("hi", false, "Hearing impaired");
 flags.parse();
 
 if (flags.get("show") == "") {
-  console.error("Must provide show name");
+  console.log("Must provide show name");
+  console.log("");
+  flags.help();
   process.exit(1);
 }
 if (flags.get("s") == -1) {
-  console.error("Must provide a season");
+  console.log("Must provide a season");
+  console.log("");
+  flags.help();
   process.exit(1);
 }
 if (flags.get("e") == -1) {
-  console.error("Must provide an episode");
+  console.log("Must provide an episode");
+  console.log("");
+  flags.help();
   process.exit(1);
 }
 
