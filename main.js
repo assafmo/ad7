@@ -42,7 +42,7 @@ const lang = flags.get("lang").toLowerCase();
 
 (async () => {
   const subs = await addic7edApi.search(show, season, episode);
-  if (!subs) {
+  if (!subs || !subs.length) {
     console.error("Found nothing for", show, season, episode);
     process.exit(1);
   }
