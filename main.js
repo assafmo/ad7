@@ -72,8 +72,18 @@ const lang = flags.get("lang").toLowerCase();
     }
 
     console.log("Downloading", fileName);
-    await addic7edApi.download(subInfo, "./" + fileName);
-
+    let tries = 5;
+    while (tries > 0) {
+      tries--;
+      try {
+        await addic7edApi.download(subInfo, "./" + fileName);
+      } catch (e) {
+        if (tries == 0) {
+          console.log("Failed to download", fileName, "(5 retries)");
+        }
+      }
+      break;
+    }
     alreadyDownloaded.add(fileName);
   }
 })();
