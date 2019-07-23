@@ -84,6 +84,7 @@ const lang = flags.get("lang").toLowerCase();
       }
       break;
     }
+
     alreadyDownloaded.add(fileName);
   }
 })();
